@@ -2,7 +2,7 @@ import { useRef } from "react";
 
 export default function Answers({
   answers,
-  selectedAns,
+  selectedAnswer,
   answerState,
   onSelect,
 }) {
@@ -16,7 +16,7 @@ export default function Answers({
   return (
     <ul id="answers">
       {shuffleAns.current.map((answer) => {
-        const isSelected = selectedAns === answer;
+        const isSelected = selectedAnswer === answer;
         let cssClass = "";
         if (answerState === "answered" && isSelected) {
           cssClass = "selected";
