@@ -19,19 +19,19 @@ export default function Summary({ userAnswers }) {
     <div id="summary">
       <img src={quizCompleteImg} alt="Trophy icon" />
       <h2>Quiz Completed!</h2>
-      <div id="summary-stats">
-        <p>
+      <div id="summary-stats" className="summary-stats">
+        <div id="test">
           <span className="number">{skippedAnswersShare}%</span>
           <span className="text">skipped</span>
-        </p>
-        <p>
+        </div>
+        <div>
           <span className="number">{correctAnswersShare}%</span>
           <span className="text">answered correctly</span>
-        </p>
-        <p>
+        </div>
+        <div>
           <span className="number">{wrongAnswersShare}%</span>
           <span className="text">answered incorrectly</span>
-        </p>
+        </div>
       </div>
       <ol>
         {userAnswers.map((answer, index) => {
